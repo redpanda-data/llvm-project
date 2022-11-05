@@ -144,6 +144,12 @@ Improvements to clang-tidy
 New checks
 ^^^^^^^^^^
 
+- New :doc:`cppcoreguidelines-avoid-capturing-lambda-coroutines
+  <clang-tidy/checks/cppcoreguidelines/avoid-capturing-lambda-coroutines>` check.
+
+  Adds check for cpp core guideline: "CP.51: Do not use capturing lambdas that
+  are coroutines."
+
 - New :doc:`bugprone-shared-ptr-array-mismatch <clang-tidy/checks/bugprone/shared-ptr-array-mismatch>` check.
 
   Finds initializations of C++ shared pointers to non-array type that are initialized with an array.
