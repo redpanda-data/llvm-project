@@ -232,6 +232,12 @@ New checks
   Finds potentially incorrect calls to ``memcmp()`` based on properties of the
   arguments.
 
+- New :doc:`cppcoreguidelines-avoid-capturing-lambda-coroutines
+  <clang-tidy/checks/cppcoreguidelines-avoid-capturing-lambda-coroutines>` check.
+
+  Adds check for cpp core guideline: "CP.51: Do not use capturing lambdas that
+  are coroutines."
+
 - New :doc:`cppcoreguidelines-virtual-class-destructor
   <clang-tidy/checks/cppcoreguidelines-virtual-class-destructor>` check.
 
