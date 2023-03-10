@@ -14,6 +14,7 @@
 #include "../modernize/AvoidCArraysCheck.h"
 #include "../modernize/UseOverrideCheck.h"
 #include "../readability/MagicNumbersCheck.h"
+#include "AvoidCapturingLambdaCoroutinesCheck.h"
 #include "AvoidConstOrRefDataMembersCheck.h"
 #include "AvoidDoWhileCheck.h"
 #include "AvoidGotoCheck.h"
@@ -47,6 +48,8 @@ namespace cppcoreguidelines {
 class CppCoreGuidelinesModule : public ClangTidyModule {
 public:
   void addCheckFactories(ClangTidyCheckFactories &CheckFactories) override {
+    CheckFactories.registerCheck<AvoidCapturingLambdaCoroutinesCheck>(
+        "cppcoreguidelines-avoid-capturing-lambda-coroutines");
     CheckFactories.registerCheck<modernize::AvoidCArraysCheck>(
         "cppcoreguidelines-avoid-c-arrays");
     CheckFactories.registerCheck<AvoidConstOrRefDataMembersCheck>(
