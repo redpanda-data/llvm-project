@@ -141,6 +141,13 @@ New checks
   Warns when `empty()` is used on a range and the result is ignored. Suggests `clear()`
   if it is an existing member function.
 
+- New :doc:`cppcoreguidelines-avoid-capturing-lambda-coroutines
+  <clang-tidy/checks/cppcoreguidelines/avoid-capturing-lambda-coroutines>` check.
+
+  Flags C++20 coroutine lambdas with non-empty capture lists that may cause
+  use-after-free errors and suggests avoiding captures or ensuring the lambda
+  closure object has a guaranteed lifetime.
+
 New check aliases
 ^^^^^^^^^^^^^^^^^
 
