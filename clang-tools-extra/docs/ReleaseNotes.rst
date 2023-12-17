@@ -115,6 +115,11 @@ New checks
 
   Warns when using ``do-while`` loops.
 
+- New :doc:`misc-no-forgotten-usages
+  <clang-tidy/checks/misc/no-forgotten-usages>` check.
+
+  Adds the ability to force unused variable usages for specific classes.
+
 New check aliases
 ^^^^^^^^^^^^^^^^^
 
